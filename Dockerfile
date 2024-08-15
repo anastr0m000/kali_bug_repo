@@ -49,6 +49,8 @@ RUN pip3 install waymore arjun
 RUN cp /root/go/bin/* /usr/bin/
 RUN apt clean && \
     rm -rf /var/lib/apt/lists/*
+RUN chmod +x blu.sh
+RUN ./blu.sh
 
 
 ENTRYPOINT ["./entrypoint.sh"]
