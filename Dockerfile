@@ -43,7 +43,6 @@ RUN go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
 #RUN go get -u github.com/tomnomnom/assetfinder
 RUN go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 RUN go install github.com/tomnomnom/waybackurls@latest
-#go get -u github.com/tomnomnom/assetfinder
 RUN  go install github.com/lc/gau/v2/cmd/gau@latest
 RUN go install github.com/hahwul/dalfox/v2@latest
 RUN pip3 install waymore arjun
