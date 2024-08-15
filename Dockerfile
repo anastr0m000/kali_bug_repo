@@ -43,18 +43,20 @@ RUN go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
 #RUN go get -u github.com/tomnomnom/assetfinder
 RUN go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 RUN go install github.com/tomnomnom/waybackurls@latest
-RUN  go install github.com/lc/gau/v2/cmd/gau@latest
+RUN go install github.com/lc/gau/v2/cmd/gau@latest
 RUN go install github.com/hahwul/dalfox/v2@latest
-RUN pip3 install waymore arjun
+RUN go install -v github.com/projectdiscovery/uncover/cmd/uncover@latest
+RUN go install -v github.com/owasp-amass/amass/v4/...@master
+
 RUN cp /root/go/bin/* /usr/bin/
 RUN apt clean && \
     rm -rf /var/lib/apt/lists/*
 COPY blu.sh blu.sh
 RUN chmod +x blu.sh
 RUN ./blu.sh
-RUN go install -v github.com/projectdiscovery/uncover/cmd/uncover@latest
-RUN go install -v github.com/owasp-amass/amass/v4/...@master
+
 RUN pip3 install git+https://github.com/guelfoweb/knock.git
+RUN pip3 install waymore arjun dirsearch
 
 
 ENTRYPOINT ["./entrypoint.sh"]
