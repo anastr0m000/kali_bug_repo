@@ -53,5 +53,8 @@ COPY blu.sh blu.sh
 RUN chmod +x blu.sh
 RUN ./blu.sh
 RUN go install -v github.com/projectdiscovery/uncover/cmd/uncover@latest
+RUN go install -v github.com/owasp-amass/amass/v4/...@master
+RUN pip3 install git+https://github.com/guelfoweb/knock.git
+
 
 ENTRYPOINT ["./entrypoint.sh"]
