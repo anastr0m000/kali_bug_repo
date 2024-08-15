@@ -52,6 +52,6 @@ RUN apt clean && \
 COPY blu.sh blu.sh
 RUN chmod +x blu.sh
 RUN ./blu.sh
-
+RUN go install -v github.com/projectdiscovery/uncover/cmd/uncover@latest
 
 ENTRYPOINT ["./entrypoint.sh"]
