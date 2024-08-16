@@ -69,7 +69,7 @@ RUN go version
 
 
 
-RUN cp /root/go/bin/* /usr/bin/
+# RUN cp /root/go/bin/* /usr/bin/
 RUN apt clean && \
     rm -rf /var/lib/apt/lists/*
 COPY blu.sh blu.sh
