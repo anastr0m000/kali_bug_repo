@@ -76,7 +76,7 @@ COPY blu.sh blu.sh
 RUN chmod +x blu.sh
 RUN ./blu.sh
 
-RUN pip3 install git+https://github.com/guelfoweb/knock.git
+# RUN pip3 install git+https://github.com/guelfoweb/knock.git
 RUN pip3 install waymore arjun dirsearch
 COPY blue2.sh blue2.sh
 RUN chmod +x blue2.sh
