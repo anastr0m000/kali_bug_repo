@@ -31,15 +31,16 @@ RUN go version
 #COPY blu.sh blu.sh
 #RUN chmod +x blu.sh
 #RUN ./blu.sh
-#RUN go install github.com/projectdiscovery/katana/cmd/katana@latest
+
 RUN go install -v github.com/tomnomnom/anew@latest
 RUN go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
-# RUN go install -v github.com/owasp-amass/amass/v4/...@master
-# RUN go install github.com/tomnomnom/gf@latest 
+RUN go install -v github.com/owasp-amass/amass/v4/...@master
+RUN go install github.com/tomnomnom/gf@latest 
+RUN GO111MODULE=on go install github.com/jaeles-project/gospider@latest
 # RUN git clone https://github.com/rix4uni/gf-patterns.git ~/.gf
 
 # #RUN go install -u github.com/tomnomnom/gf
-# RUN GO111MODULE=on go install github.com/jaeles-project/gospider@latest
+
 # RUN go install github.com/hakluke/hakrawler@latest
 # RUN go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
 # #RUN go get -u github.com/tomnomnom/assetfinder
@@ -49,6 +50,8 @@ RUN go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 # RUN go install github.com/hahwul/dalfox/v2@latest
 # RUN go install -v github.com/projectdiscovery/uncover/cmd/uncover@latest
 # RUN go install -v github.com/owasp-amass/amass/v4/...@master
+# RUN go install github.com/ffuf/ffuf/v2@latest
+#RUN go install github.com/projectdiscovery/katana/cmd/katana@latest
 
 # RUN cp /root/go/bin/* /usr/bin/
 # RUN apt clean && \
