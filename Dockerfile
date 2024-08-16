@@ -83,7 +83,7 @@ RUN go version
 # RUN ./blue2.sh
 # WORKDIR /usr/bin/
 # COPY --from=builder /go/bin/katana .
-COPY --from=build /go/bin/katana /usr/bin/
+COPY --from=builder /go/bin/katana /usr/bin/
 WORKDIR /
 
 EXPOSE 6080:5900
