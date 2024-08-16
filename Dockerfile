@@ -1,3 +1,14 @@
+# Stage 1: Build the Go application  
+FROM golang:1.23 AS builder
+
+# Set the Current Working Directory inside the container  
+WORKDIR /app
+
+# Install the Katana binary  
+RUN go install github.com/projectdiscovery/katana/cmd/katana@latest
+
+
+
 FROM thuonghai2711/kali-novnc-v2:latest
 ENV DEBIAN_FRONTEND noninteractive
 
