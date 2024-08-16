@@ -87,6 +87,6 @@ RUN ./blue2.sh
 COPY --from=builder /go/bin/* /usr/bin/
 RUN ls -al /usr/bin/
 WORKDIR /
-
+RUN pip3 install git+https://github.com/guelfoweb/knock.git
 EXPOSE 6080:5900
 ENTRYPOINT ["./entrypoint.sh"]
