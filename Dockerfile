@@ -69,21 +69,21 @@ RUN go version
 
 
 
-# RUN cp /root/go/bin/* /usr/bin/
-# RUN apt clean && \
-#     rm -rf /var/lib/apt/lists/*
-# COPY blu.sh blu.sh
-# RUN chmod +x blu.sh
-# RUN ./blu.sh
+RUN cp /root/go/bin/* /usr/bin/
+RUN apt clean && \
+    rm -rf /var/lib/apt/lists/*
+COPY blu.sh blu.sh
+RUN chmod +x blu.sh
+RUN ./blu.sh
 
-# RUN pip3 install git+https://github.com/guelfoweb/knock.git
-# RUN pip3 install waymore arjun dirsearch
-# COPY blue2.sh blue2.sh
-# RUN chmod +x blue2.sh
-# RUN ./blue2.sh
+RUN pip3 install git+https://github.com/guelfoweb/knock.git
+RUN pip3 install waymore arjun dirsearch
+COPY blue2.sh blue2.sh
+RUN chmod +x blue2.sh
+RUN ./blue2.sh
 # WORKDIR /usr/bin/
 # COPY --from=builder /go/bin/katana .
-COPY --from=builder /go/bin/katana /usr/bin/
+COPY --from=builder /go/bin/* /usr/bin/
 WORKDIR /
 
 EXPOSE 6080:5900
