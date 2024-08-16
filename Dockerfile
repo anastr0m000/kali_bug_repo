@@ -81,12 +81,13 @@ RUN ./blu.sh
 RUN pip3 install waymore arjun dirsearch
 COPY blue2.sh blue2.sh
 RUN chmod +x blue2.sh
-RUN ./blue2.sh
 # WORKDIR /usr/bin/
 # COPY --from=builder /go/bin/katana .
 COPY --from=builder /go/bin/* /usr/bin/
 RUN ls -al /usr/bin/
 WORKDIR /
 RUN pip3 install git+https://github.com/guelfoweb/knock.git
+RUN rm go${GOLANG_VERSION}.linux-amd64.tar.gz
+RUN ./blue2.sh
 EXPOSE 6080:5900
 ENTRYPOINT ["./entrypoint.sh"]
