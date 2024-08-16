@@ -27,8 +27,12 @@ RUN GO111MODULE=on go install github.com/jaeles-project/gospider@latest
 # RUN go install github.com/ffuf/ffuf/v2@latest
 #RUN go install github.com/projectdiscovery/katana/cmd/katana@latest
 
+# FROM runtime-image 
+#  Copy application artifacts from the build stage (e.g., JAR file)
 
-FROM thuonghai2711/kali-novnc-v2:latest
+
+
+FROM thuonghai2711/kali-novnc-v2:latest AS final-stage  
 WORKDIR /
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -77,8 +81,9 @@ RUN go version
 # COPY blue2.sh blue2.sh
 # RUN chmod +x blue2.sh
 # RUN ./blue2.sh
-WORKDIR /usr/bin/
-COPY --from=builder /go/bin/katana .
+# WORKDIR /usr/bin/
+# COPY --from=builder /go/bin/katana .
+COPY --from=build /go/bin/katana /usr/bin/
 WORKDIR /
 
 EXPOSE 6080:5900
