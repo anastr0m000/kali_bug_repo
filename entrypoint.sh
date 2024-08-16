@@ -31,7 +31,10 @@ echo "export GOROOT=/usr/local/go" >> ~/.profile
 echo "export GOPATH=$HOME/go" >> ~/.profile
 echo "export PATH=$GOPATH/bin:$GOROOT/bin:$PATH" >> ~/.profile
 
-
+echo "xuser  ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+echo 'xfce4-terminal -e "sudo -i"' >> /home/xuser/Desktop/terminal.sh
+chmod +x /home/xuser/Desktop/terminal.sh
+mkdir /root/hunt
 source ~/.profile
 
 supervisord 1>/dev/null 2>/dev/null
