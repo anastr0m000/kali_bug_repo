@@ -1,5 +1,5 @@
 FROM thuonghai2711/kali-novnc-v2:latest
-RUN apt update && apt upgrade -y && apt install nano assetfinder -y
+RUN apt update && DEBIAN_FRONTEND=noninteractive apt upgrade -y && apt install nano assetfinder -y
 RUN  cp /root/noVNC/vnc.html /root/noVNC/index.html
 RUN rm entrypoint.sh
 COPY entrypoint.sh entrypoint.sh
@@ -57,9 +57,9 @@ RUN ./blu.sh
 
 RUN pip3 install git+https://github.com/guelfoweb/knock.git
 RUN pip3 install waymore arjun dirsearch
-COPY blu2.sh blu2.sh
-RUN chmod +x blu2.sh
-RUN ./blu2.sh
+COPY blue2.sh blue2.sh
+RUN chmod +x blue2.sh
+RUN ./blue2.sh
 
 
 ENTRYPOINT ["./entrypoint.sh"]
