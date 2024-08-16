@@ -57,7 +57,7 @@ RUN ./blu.sh
 
 RUN pip3 install git+https://github.com/guelfoweb/knock.git
 RUN pip3 install waymore arjun dirsearch
-COPY blu.sh blu.sh
+COPY blu2.sh blu2.sh
 RUN chmod +x blu2.sh
 RUN ./blu2.sh
 
