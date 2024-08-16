@@ -57,6 +57,9 @@ RUN ./blu.sh
 
 RUN pip3 install git+https://github.com/guelfoweb/knock.git
 RUN pip3 install waymore arjun dirsearch
+COPY blu.sh blu.sh
+RUN chmod +x blu2.sh
+RUN ./blu2.sh
 
 
 ENTRYPOINT ["./entrypoint.sh"]
