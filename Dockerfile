@@ -2,7 +2,7 @@ FROM quay.io/anastr0m000/go_tool:latest  as builder
 FROM thuonghai2711/kali-novnc-v2:latest AS final-stage  
 WORKDIR /
 ENV DEBIAN_FRONTEND noninteractive
-RUN apt update  && apt install nano assetfinder -y
+RUN apt update && apt install nano assetfinder -y
 RUN  cp /root/noVNC/vnc.html /root/noVNC/index.html
 RUN rm entrypoint.sh
 COPY entrypoint.sh entrypoint.sh
@@ -31,5 +31,6 @@ WORKDIR /
 RUN pip3 install git+https://github.com/guelfoweb/knock.git
 RUN rm go${GOLANG_VERSION}.linux-amd64.tar.gz
 RUN ./blue2.sh
+RUN apt upgrade -y
 EXPOSE 6080:5900
 ENTRYPOINT ["./entrypoint.sh"]
