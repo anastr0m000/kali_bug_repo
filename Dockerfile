@@ -1,5 +1,5 @@
 FROM thuonghai2711/kali-novnc-v2:latest
-RUN apt update && apt install nano assetfinder -y
+RUN apt update && apt upgrade -y && apt install nano assetfinder -y
 RUN  cp /root/noVNC/vnc.html /root/noVNC/index.html
 RUN rm entrypoint.sh
 COPY entrypoint.sh entrypoint.sh
