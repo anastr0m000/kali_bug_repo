@@ -17,8 +17,6 @@ ENV GOROOT=/usr/local/go
 ENV GOPATH=/root/go
 ENV PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 RUN go version
-RUN apt clean && \
-    rm -rf /var/lib/apt/lists/*
 COPY blu.sh blu.sh
 RUN chmod +x blu.sh
 RUN ./blu.sh
@@ -32,5 +30,7 @@ RUN pip3 install git+https://github.com/guelfoweb/knock.git
 RUN rm go${GOLANG_VERSION}.linux-amd64.tar.gz
 RUN ./blue2.sh
 RUN apt upgrade -y
+RUN apt clean && \
+    rm -rf /var/lib/apt/lists/*
 EXPOSE 6080:5900
 ENTRYPOINT ["./entrypoint.sh"]
