@@ -85,6 +85,7 @@ RUN ./blue2.sh
 # WORKDIR /usr/bin/
 # COPY --from=builder /go/bin/katana .
 COPY --from=builder /go/bin/* /usr/bin/
+RUN ls -al /usr/bin/
 WORKDIR /
 
 EXPOSE 6080:5900
