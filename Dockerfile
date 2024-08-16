@@ -5,7 +5,7 @@ FROM golang:1.23 as builder
 WORKDIR /
 
 # Install the Katana binary  
-RUN go install github.com/projectdiscovery/katana/cmd/katana@latest
+# RUN go install github.com/projectdiscovery/katana/cmd/katana@latest
 RUN go install -v github.com/tomnomnom/anew@latest
 RUN go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 RUN go install -v github.com/owasp-amass/amass/v4/...@master
