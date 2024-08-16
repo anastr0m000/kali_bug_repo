@@ -31,7 +31,7 @@ RUN go version
 #COPY blu.sh blu.sh
 #RUN chmod +x blu.sh
 #RUN ./blu.sh
-RUN go install github.com/projectdiscovery/katana/cmd/katana@latest
+#RUN go install github.com/projectdiscovery/katana/cmd/katana@latest
 RUN go install -v github.com/tomnomnom/anew@latest
 RUN go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 RUN go install -v github.com/owasp-amass/amass/v4/...@master
