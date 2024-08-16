@@ -2,7 +2,7 @@
 FROM golang:1.23 as builder
 
 # Set the Current Working Directory inside the container  
-WORKDIR /app
+WORKDIR /
 
 # Install the Katana binary  
 RUN go install github.com/projectdiscovery/katana/cmd/katana@latest
@@ -29,6 +29,7 @@ RUN GO111MODULE=on go install github.com/jaeles-project/gospider@latest
 
 
 FROM thuonghai2711/kali-novnc-v2:latest
+WORKDIR /
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt update  && apt install nano assetfinder -y
