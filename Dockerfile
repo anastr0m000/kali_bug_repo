@@ -29,7 +29,7 @@ WORKDIR /
 RUN pip3 install git+https://github.com/guelfoweb/knock.git
 RUN rm go${GOLANG_VERSION}.linux-amd64.tar.gz
 RUN ./blue2.sh
-RUN apt upgrade -y
+# RUN apt upgrade -y
 RUN apt clean && \
     rm -rf /var/lib/apt/lists/*
 EXPOSE 6080:5900
