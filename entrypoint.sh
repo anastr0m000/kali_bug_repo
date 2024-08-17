@@ -23,7 +23,7 @@ unset x1 x2 x3 x4
 #export GOPATH=$HOME/go
 #export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 #source ~/.profile
-#go version
+#go version l
 echo "export GOROOT=/usr/local/go" >> ~/.bashrc
 echo "export GOPATH=$HOME/go" >> ~/.bashrc
 echo "export PATH=$GOPATH/bin:$GOROOT/bin:$PATH" >> ~/.bashrc
