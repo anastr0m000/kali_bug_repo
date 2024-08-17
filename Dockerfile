@@ -32,5 +32,7 @@ RUN ./blue2.sh
 # RUN apt upgrade -y
 RUN apt clean && \
     rm -rf /var/lib/apt/lists/*
+COPY auto.sh auto.sh
+RUN chmod +x auto.sh
 EXPOSE 6080:5900
 ENTRYPOINT ["./entrypoint.sh"]
