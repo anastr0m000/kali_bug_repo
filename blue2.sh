@@ -27,7 +27,10 @@ git clone https://github.com/0x240x23elu/JSScanner.git
 cd JSScanner
 pip3 install -r  requirements.txt
 cd ..
-
+mkdir ~/.gf
+cd /root/
+git clone https://github.com/1ndianl33t/Gf-Patterns
+mv ~/Gf-Patterns/*.json ~/.gf
 
 
 
