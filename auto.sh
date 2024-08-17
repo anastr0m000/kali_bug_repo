@@ -58,6 +58,8 @@ cat subs.txt | httpx -ports 80,443,8080,8000,8888 -threads 200 |anew live.txt
 # dnsx -1 subs.txt -r resolvers.txt | anew resolved.txt
 
 # naabu -1 resolved.txt -nmap -rate 5000 | anew ports.txt; httpx -l ports .txt | anew alive.txt 
-katana -list live.txt -kf all -jcn -d 5 -ps -pss waybackarchive,commoncrawl,alienvault -fx -ef woff,css,png,svg,jpg,woff2,jpeg,gif,svg -o urls.txt 
+katana -list live.txt -kf all -jc -d 5 -ps -pss waybackarchive,commoncrawl,alienvault -fx -ef woff,css,png,svg,jpg,woff2,jpeg,gif,svg -o urls.txt 
 
 nuclei -l urls.txt -es info, unknown -ept ssl -ss template-spray | anew nuclei.txt
+cat urls.txt  | gf xss | anew xss.txt
+cat urls.txt  | gf sqli | anew sqli.txt
