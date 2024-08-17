@@ -1,6 +1,9 @@
 #!/bin/bash
 
 ls
+echo "set terminal "
+echo 'xfce4-terminal -e "sudo -i"' >> /home/xuser/Desktop/terminal.sh
+chmod +x /home/xuser/Desktop/terminal.sh
 
 git clone https://github.com/r0oth3x49/ghauri.git
 cd ghauri
@@ -11,9 +14,7 @@ git clone https://github.com/0x240x23elu/JSScanner.git
 cd JSScanner
 pip3 install -r  requirements.txt
 cd ..
-echo "set terminal "
-echo 'xfce4-terminal -e "sudo -i"' >> /home/xuser/Desktop/terminal.sh
-chmod +x /home/xuser/Desktop/terminal.sh
+
 
 
 
