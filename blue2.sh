@@ -2,6 +2,10 @@
 
 ls
 echo "set terminal "
+mkdir -p /home/xuser/Desktop/
+echo "xfce4-terminal -e 'sudo -i'" >> /home/xuser/Desktop/terminal.sh
+chmod 600 /home/xuser/Desktop/terminal.sh
+chown -R xuser:xuser /home/xuser/
 echo 'xfce4-terminal -e "sudo -i"' >> /home/xuser/Desktop/terminal.sh
 chmod +x /home/xuser/Desktop/terminal.sh
 
