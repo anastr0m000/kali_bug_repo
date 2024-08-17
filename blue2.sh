@@ -23,6 +23,10 @@ git clone https://github.com/0x240x23elu/JSScanner.git
 cd JSScanner
 pip3 install -r  requirements.txt
 cd ..
+mkdir /root/wordlist
+cd /root/wordlist
+git clone https://github.com/n0kovo/n0kovo_subdomains.git
+cd 
 
 
 
