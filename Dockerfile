@@ -2,7 +2,7 @@ FROM quay.io/anastr0m000/go_tool:latest  as builder
 FROM thuonghai2711/kali-novnc-v2:latest AS final-stage  
 WORKDIR /
 ENV DEBIAN_FRONTEND noninteractive
-RUN apt update && apt install nano assetfinder -y
+RUN apt update && apt install nano assetfinder libpcap-dev -y
 RUN  cp /root/noVNC/vnc.html /root/noVNC/index.html
 RUN rm entrypoint.sh
 COPY entrypoint.sh entrypoint.sh
