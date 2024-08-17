@@ -1,5 +1,5 @@
 #!/bin/bash
-mkdir /root/wordlist
+mkdir -p /root/wordlist
 cd /root/wordlist
 git clone https://github.com/n0kovo/n0kovo_subdomains.git
 cd 
@@ -31,6 +31,8 @@ mkdir ~/.gf
 cd /root/
 git clone https://github.com/1ndianl33t/Gf-Patterns
 mv ~/Gf-Patterns/*.json ~/.gf
+wget https://raw.githubusercontent.com/maurosoria/dirsearch/master/db/dicc.txt
+cp dicc.txt /root/wordlist
 
 
 
