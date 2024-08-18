@@ -35,4 +35,13 @@ wget https://raw.githubusercontent.com/maurosoria/dirsearch/master/db/dicc.txt
 cp dicc.txt /root/wordlist
 
 
+git clone https://github.com/gotr00t0day/spyhunt.git
+
+cd spyhunt
+
+pip3 install -r requirements.txt
+
+python3 install.py
+cd
+
 
