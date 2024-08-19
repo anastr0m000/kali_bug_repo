@@ -23,7 +23,7 @@ RUN ./blu.sh
 RUN pip3 install waymore arjun dirsearch
 COPY blue2.sh blue2.sh
 RUN chmod +x blue2.sh
-COPY --from=builder /go/bin/* /usr/bin/
+COPY --from=builder /go/bin/* /usr/local/bin/
 RUN ls -al /usr/bin/
 # WORKDIR /
 RUN pip3 install git+https://github.com/guelfoweb/knock.git
