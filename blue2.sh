@@ -32,8 +32,9 @@ cd /root/
 git clone https://github.com/1ndianl33t/Gf-Patterns
 mv ~/Gf-Patterns/*.json ~/.gf
 wget https://raw.githubusercontent.com/maurosoria/dirsearch/master/db/dicc.txt
-cp dicc.txt /root/wordlist
 
+wget https://raw.githubusercontent.com/emadshanab/LFI-Payload-List/master/LFI%20payloads.txt -O LFI.txt
+mv dicc.txt LFI.txt /root/wordlist
 
 git clone https://github.com/gotr00t0day/spyhunt.git
 
@@ -43,5 +44,8 @@ pip3 install -r requirements.txt
 
 python3 install.py
 cd
-
+git clone https://github.com/faiyazahmad07/xss_vibes.git
+cd xss_vibes
+pip3 install -r requirements.txt
+cd
 
