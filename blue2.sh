@@ -48,4 +48,14 @@ git clone https://github.com/faiyazahmad07/xss_vibes.git
 cd xss_vibes
 pip3 install -r requirements.txt
 cd
+apt install -y tmux
+#echo -e 'set -g mouse on' >> ~/.tmux.config
+cat <<EOL > ~/.tmux.config
+set -g mouse on
+bind -n WheelUpPane if-shell -F -t = "#{mouse_any_flag}" "send-keys -M" "if -Ft= '#{pane_in_mode}' 'send-keys -M' 'copy-mode -e; send-keys -M'"
+EOL
+
+
+
+
 
