@@ -34,7 +34,8 @@ mv ~/Gf-Patterns/*.json ~/.gf
 wget https://raw.githubusercontent.com/maurosoria/dirsearch/master/db/dicc.txt
 
 wget https://raw.githubusercontent.com/emadshanab/LFI-Payload-List/master/LFI%20payloads.txt -O LFI.txt
-mv dicc.txt LFI.txt /root/wordlist
+wget https://raw.githubusercontent.com/Damian89/xssfinder/master/wordlists/params.txt
+mv dicc.txt LFI.txt params.txt /root/wordlist
 
 git clone https://github.com/gotr00t0day/spyhunt.git
 
