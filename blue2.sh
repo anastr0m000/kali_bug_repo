@@ -31,12 +31,14 @@ mkdir ~/.gf
 cd /root/
 git clone https://github.com/1ndianl33t/Gf-Patterns
 mv ~/Gf-Patterns/*.json ~/.gf
+cd /root/wordlist
+wget https://yolospacehacker.com/hackersguide/burp-parameter-names.txt
 wget https://raw.githubusercontent.com/maurosoria/dirsearch/master/db/dicc.txt
 
 wget https://raw.githubusercontent.com/emadshanab/LFI-Payload-List/master/LFI%20payloads.txt -O LFI.txt
 wget https://raw.githubusercontent.com/Damian89/xssfinder/master/wordlists/params.txt
-mv dicc.txt LFI.txt params.txt /root/wordlist
-
+#mv dicc.txt LFI.txt params.txt
+cd /root/
 git clone https://github.com/gotr00t0day/spyhunt.git
 
 cd spyhunt
