@@ -3,7 +3,7 @@ mkdir -p /root/wordlist
 cd /root/wordlist
 git clone https://github.com/n0kovo/n0kovo_subdomains.git
 cd 
-
+pip3 install dedupe
 ls
 echo "set terminal "
 mkdir -p /home/xuser/Desktop/
