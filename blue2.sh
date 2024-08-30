@@ -47,6 +47,8 @@ pip3 install -r requirements.txt
 
 python3 install.py
 cd
+git clone https://github.com/B1gN0Se/BSQLi.git
+
 git clone https://github.com/faiyazahmad07/xss_vibes.git
 cd xss_vibes
 pip3 install -r requirements.txt
