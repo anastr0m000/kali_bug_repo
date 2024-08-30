@@ -1,5 +1,8 @@
 #!/bin/bash
+echo 'cat $1 |wc -l' > /usr/local/bin/wwc
+chmod +x  /usr/local/bin/wwc
 mkdir -p /root/wordlist
+
 cd /root/wordlist
 git clone https://github.com/n0kovo/n0kovo_subdomains.git
 cd 
